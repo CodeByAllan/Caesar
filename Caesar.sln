@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caesar.Cipher", "Caesar.Cipher\Caesar.Cipher.csproj", "{A8A20323-EDA1-4FA2-858F-B6965C15A629}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caesar.Console", "Caesar.Console\Caesar.Console.csproj", "{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{A8A20323-EDA1-4FA2-858F-B6965C15A629}.Release|x64.Build.0 = Release|Any CPU
 		{A8A20323-EDA1-4FA2-858F-B6965C15A629}.Release|x86.ActiveCfg = Release|Any CPU
 		{A8A20323-EDA1-4FA2-858F-B6965C15A629}.Release|x86.Build.0 = Release|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Release|x64.Build.0 = Release|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC3E541E-F704-4DAC-BAC4-E8BEA6AD0756}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

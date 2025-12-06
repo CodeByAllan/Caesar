@@ -1,5 +1,5 @@
 namespace Caesar.Cipher.lib;
-
+using System.Text;
 public static class Cipher
 {
     private readonly static int AlphabetLength = 26;

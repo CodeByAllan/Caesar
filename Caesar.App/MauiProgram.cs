@@ -1,4 +1,5 @@
 ﻿using Caesar.App.ViewModels;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace Caesar.App
@@ -7,7 +8,10 @@ namespace Caesar.App
     {
         public static MauiApp CreateMauiApp()
         {
-            var builder = MauiApp.CreateBuilder();
+            var builder = MauiApp.CreateBuilder().UseMauiCommunityToolkit(options =>
+            {
+                options.SetShouldEnableSnackbarOnWindows(true);
+            });
             builder.Services.AddTransient<MainPageViewModel>();
             builder
                 .UseMauiApp<App>()

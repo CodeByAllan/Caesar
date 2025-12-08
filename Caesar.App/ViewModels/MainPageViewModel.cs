@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 namespace Caesar.App.ViewModels
 {
@@ -12,6 +14,10 @@ namespace Caesar.App.ViewModels
         private bool _isCrypt = true;
         [ObservableProperty]
         private string _result = string.Empty;
+
+        private readonly CancellationTokenSource _cancellationTokenSource = new();
+        private string _toastText = string.Empty;
+
         [RelayCommand]
         private void Run()
         {
@@ -26,15 +32,24 @@ namespace Caesar.App.ViewModels
         [RelayCommand]
         private async Task Copy()
         {
+            ToastDuration duration = ToastDuration.Short;
+            double fontSize = 14;
             if (!string.IsNullOrEmpty(Result))
             {
                 try
                 {
                     await Clipboard.Default.SetTextAsync(Result);
+                    _toastText = "Sucess to copy text to clipboard!";
                 }
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine($"Error copying: {ex.Message}");
+                    _toastText = "Failed to copy text to clipboard!";
+                }
+                finally
+                {
+                    var toast = Toast.Make(_toastText, duration, fontSize);
+                    await toast.Show(_cancellationTokenSource.Token);
                 }
             }
         }

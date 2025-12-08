@@ -12,26 +12,37 @@
             <Image
                 HeightRequest="100"
                 HorizontalOptions="Center"
-                Source="security.png" />
-            <Label Text="Key" />
-            <Entry Text="{Binding Key}" />
-            <Label Text="Text" />
+                Source="security.png"/>
+            <Label Text="Key"/>
+            <Entry Text="{Binding Key}"/>
+            <Label Text="Text"/>
             <Editor
                 x:Name="ResultEditor"
                 AutoSize="TextChanges"
                 Placeholder="Your text that you want to encrypt or decrypt"
-                Text="{Binding Text}" />
-            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Padding="10" Text="Encrypt" />
-                <CheckBox IsChecked="{Binding IsCrypt}" VerticalOptions="Center" />
+                Text="{Binding Text}"/>
+            <HorizontalStackLayout HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                <Label Padding="10"
+                        Text="Encrypt"/>
+                <CheckBox IsChecked="{Binding IsCrypt}"
+                        VerticalOptions="Center"/>
             </HorizontalStackLayout>
-            <Button Command="{Binding RunCommand}" Text="Run" />
+            <Button Command="{Binding RunCommand}"
+                    Text="Run"/>
             <Border
                 Padding="20"
                 StrokeShape="RoundRectangle 10"
                 StrokeThickness="2">
-                <Label MaximumHeightRequest="500" Text="{Binding Result}" />
+                <Label MaximumHeightRequest="500"
+                        Text="{Binding Result}"/>
             </Border>
+            <Grid ColumnDefinitions="2,0.75*,0.25*">
+                <Button
+                    Grid.Column="2"
+                    Command="{Binding CopyCommand}"
+                    Text="Copy"/>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 

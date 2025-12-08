@@ -23,5 +23,20 @@ namespace Caesar.App.ViewModels
                 ? Cipher.lib.Cipher.Crypt(Key, Text)
                 : Cipher.lib.Cipher.DeCrypt(Key, Text);
         }
+        [RelayCommand]
+        private async Task Copy()
+        {
+            if (!string.IsNullOrEmpty(Result))
+            {
+                try
+                {
+                    await Clipboard.Default.SetTextAsync(Result);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error copying: {ex.Message}");
+                }
+            }
+        }
     }
 }

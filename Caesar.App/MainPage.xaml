@@ -16,7 +16,7 @@
                 Source="security.png" />
 
             <Label Text="Key" />
-            <Entry Text="{Binding Key}" />
+            <Entry Keyboard="Numeric" Text="{Binding Key}" />
 
             <Label Text="Text" />
             <Editor

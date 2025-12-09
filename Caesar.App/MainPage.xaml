@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="Caesar.App.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
 
     <ScrollView>
         <VerticalStackLayout
@@ -16,7 +17,14 @@
                 Source="security.png" />
 
             <Label Text="Key" />
-            <Entry Keyboard="Numeric" Text="{Binding Key}" />
+            <Entry
+                Keyboard="Numeric"
+                MaxLength="2"
+                Text="{Binding Key}">
+                <Entry.Behaviors>
+                    <toolkit:TextValidationBehavior Flags="ValidateOnValueChanged" RegexPattern="^[0-9]+$" />
+                </Entry.Behaviors>
+            </Entry>
 
             <Label Text="Text" />
             <Editor

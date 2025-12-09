@@ -13,9 +13,9 @@ C# implementation of the Caesar cipher for academic studies on information secur
 
 ## 📷 Screenshots
 
-![App Screenshot Decrypt](https://github.com/CodeByAllan/Caesar/blob/master/doc/images/screenshot01.jpg)
+<img src="https://github.com/CodeByAllan/Caesar/blob/master/doc/images/screenshot01.jpg" alt="App Screenshot Encrypt" width="300px" />
 
-![App Screenshot Encrypt](https://github.com/CodeByAllan/Caesar/blob/master/doc/images/screenshot02.jpg)
+<img src="https://github.com/CodeByAllan/Caesar/blob/master/doc/images/screenshot02.jpg" alt="App Screenshot Decrypt" width="300px" />
 
 
 ## 🚀 Features
